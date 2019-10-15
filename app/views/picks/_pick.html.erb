@@ -1,0 +1,15 @@
+<li id="pick-<%= pick.id %>">
+  <%#= link_to gravatar_for(micropost.user, size: 50), micropost.user %>
+  <span>ID: <%= link_to pick.id, pick %></span>
+  <span class="context">Context: "<%= pick.context %>"</span>
+  <span class="message">On message: "<%= link_to pick.message.value, pick.message %>"</span>
+  <span class="message">To message: "<%= link_to pick.transmit.value, pick.transmit %>"</span>
+
+<!--  <span class="context"><%#= pick.context %></span>-->
+<!--  <span class="timestamp">-->
+<!--    Posted <%#= time_ago_in_words(pick.created_at) %> ago.-->
+<!--  </span>-->
+
+  <%= link_to "delete", pick, method: :delete,
+              data: { confirm: "You sure?" } %>
+</li>

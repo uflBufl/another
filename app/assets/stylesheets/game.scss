@@ -1,0 +1,175 @@
+// Place all the styles related to the Game controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.play_page{
+  background-color: azure;
+  margin-top: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.15);
+  padding: 20px;
+}
+
+.message {
+  color: red;
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Optial', serif;
+}
+
+.pick {
+   color: black;
+   text-align: center;
+  //padding-top: ;
+   margin-top: 25px;
+  padding: 5px;
+   font-size: 30px;
+   font-family: 'Optial', serif;
+  //width: 100%;
+  //background-color: greenyellow;
+  //border: 10px double black;
+  &:hover{
+    //background-color: red;
+    //border-color: red;
+    padding: 0;
+    border: 5px double black;
+
+    text-decoration: none;
+  }
+
+  //&:hover{
+  //  text-decoration: none;
+  //}
+
+  &:active{
+    text-decoration: none;
+  }
+ }
+
+a{
+  text-decoration: none;
+
+  &:hover{
+    text-decoration: none;
+  }
+
+  &:active{
+    text-decoration: none;
+  }
+}
+
+.picks_all{
+  margin-left: 30%;
+  margin-right: 30%;
+  //text-align: center;
+
+  a{
+    text-decoration: none;
+  }
+
+  &:hover{
+    text-decoration: none;
+  }
+
+  &:active{
+    text-decoration: none;
+  }
+}
+
+.pick_box {
+  color: black;
+  text-align: center;
+  margin-top: 25px;
+  font-size: 30px;
+  font-family: 'B52', serif;
+}
+
+.comment{
+  //max-width: 200px;
+  //width: 200px;
+  //background-color: paleturquoise;
+  //float: right;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+
+  border-radius: 8px;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.15);
+
+  background-color: #979797;
+  color: crimson;
+  padding: 10px;
+
+  max-width: 300px;
+  height: 120px;
+
+  font-family: 'VCR', serif;
+
+  &_text{
+    max-width: 200px;
+    height: 100%;
+  }
+
+  &_img{
+    width: 100px;
+    height: 100px;
+    //float: left;
+  }
+
+  &:hover{
+    background-color: azure;
+    color: black;
+  }
+
+  //display: ;
+  //margin: 5px;
+  //padding-left: 10px;
+  //padding-right: 10px;
+  //padding-top: 20px;
+  //padding-bottom: 20px;
+
+  //border: 5px groove;
+  //border-color: cornflowerblue;
+  //border-radius: 50%;
+  //background-image: url(cloud2.jpg);
+
+}
+
+@media screen and (max-width: 767px) {
+  .play_page {
+    //margin-top: 310px;
+    margin-top: 100px;
+  }
+
+  .message{
+    font-size: 35px;
+  }
+
+  .pick{
+    font-size: 20px;
+  }
+
+  .comment{
+    font-size: 15px;
+    max-width: 300px;
+    height: 100px;
+
+    &_img{
+      width: 75px;
+      height: 75px;
+    }
+  }
+}
+
+//.comment_text{
+//  max-width: 200px;
+//  height: 100%;
+//}
+//
+//.comment_img{
+//  width: 100px;
+//  height: 100px;
+//}

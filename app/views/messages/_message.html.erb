@@ -1,0 +1,7 @@
+<li>
+  <span>ID: <%= link_to message.id, message %></span>
+  <span>Value: <%= link_to message.value, message %></span>
+
+  <%= link_to "delete", message, method: :delete,
+              data: { confirm: "You sure?" } %>
+</li>

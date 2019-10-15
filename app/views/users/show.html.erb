@@ -1,0 +1,21 @@
+<% provide(:title, @user.name) %>
+
+<%= render 'layouts/warner' %>
+
+<!--<div class="row">-->
+<!--  <aside class="col-md-4">-->
+<!--    <section class="user_info">-->
+      <h1 class="title">Your profile</h1>
+        <div class="block block_game">
+
+          <h2 class="game_name"><%= @user.name %></h2>
+          <h2 class="game_name"><%= @user.email %></h2>
+
+          <% if logged_in? && current_user == @user %>
+            <%= button_to "Редактировать", edit_user_path(current_user), class: 'button button_game_start', method: :get %>
+          <% end %>
+
+        </div>
+<!--    </section>-->
+<!--  </aside>-->
+<!--</div>-->

@@ -1,0 +1,106 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@font-face {
+  font-family: 'B52';
+  src: font_url('B52.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Antelive Bold';
+  src: font_url('Antelive_Bold.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'VCR';
+  src: font_url('VCR.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Optial';
+  src: font_url('Optial.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* header */
+
+#logo {
+  //margin-top: 10px;
+  //margin-bottom: auto;
+  //bottom: 0;
+  color: crimson;
+    font-family: 'Antelive Bold', serif;
+  font-size: 40px;
+  text-decoration: none;
+  //margin-left: 40px;
+}
+
+header{
+  padding-top: 10px;
+  font-family: 'Antelive Bold', serif;
+  //height: 70px;
+  position: unset;
+  //overflow: none;
+}
+
+.title{
+  font-family: 'Antelive Bold', serif;
+  color: azure;
+  text-shadow: black 3px 3px 2px;
+  //align-items: center;
+  //margin-right: auto;
+  //margin-left: auto;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.help_text{
+  font-size: 17px;
+}
+
+.warner_block{
+  padding-left: 5px;
+  font-family: 'Antelive Bold', serif;
+  width: 300px;
+  //height: 100px;
+  background-color: goldenrod;
+  position: fixed;
+  margin-left: 30px;
+  margin-top: 100px;
+
+
+  border-radius: 8px;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.15);
+  color: crimson;
+}
+
+@media screen and (max-width: 767px) {
+  .title {
+    //margin-top: 310px;
+    margin-top: 100px;
+  }
+
+  #navb{
+    display: none;
+    //margin-bottom: 310px;
+  }
+
+}
+
+//@media screen and (max-height: 640px) and (max-width: 1136px) and (orientation: landscape) {
+//  .title {
+//    margin-top: 260px;
+//  }
+//}
+
+//body{
+//  color: #730E15;
+//  background-color: #979797;
+//}
