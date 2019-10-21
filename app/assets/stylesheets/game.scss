@@ -7,73 +7,46 @@
   margin-top: 30px;
   border-radius: 8px;
   box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.15);
-  padding: 20px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.img_page{
+  border-radius: 8px;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.15);
+  padding: 30px;
 }
 
 .message {
-  color: red;
+  margin: 20px;
+  color: crimson;
   text-align: center;
-  font-size: 50px;
+  font-size: 35px;
   font-family: 'Optial', serif;
+  text-shadow: black 2px 2px 1px;
+  position: relative;
 }
 
 .pick {
-   color: black;
+   color: azure;
    text-align: center;
   //padding-top: ;
    margin-top: 25px;
   padding: 5px;
-   font-size: 30px;
+   font-size: 25px;
    font-family: 'Optial', serif;
-  //width: 100%;
-  //background-color: greenyellow;
-  //border: 10px double black;
   &:hover{
-    //background-color: red;
-    //border-color: red;
     padding: 0;
-    border: 5px double black;
+    border: 5px groove azure;
 
-    text-decoration: none;
-  }
-
-  //&:hover{
-  //  text-decoration: none;
-  //}
-
-  &:active{
-    text-decoration: none;
   }
  }
 
-a{
-  text-decoration: none;
-
-  &:hover{
-    text-decoration: none;
-  }
-
-  &:active{
-    text-decoration: none;
-  }
-}
-
 .picks_all{
-  margin-left: 30%;
-  margin-right: 30%;
-  //text-align: center;
-
-  a{
-    text-decoration: none;
-  }
-
-  &:hover{
-    text-decoration: none;
-  }
-
-  &:active{
-    text-decoration: none;
-  }
+  margin-left: 25%;
+  margin-right: 25%;
+  position: relative;
+  text-shadow: black 3px 3px 2px;
 }
 
 .pick_box {
@@ -84,92 +57,99 @@ a{
   font-family: 'B52', serif;
 }
 
+.game_img{
+  margin-top: 20px;
+  object-fit: cover;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  max-height: 400px;
+  border-radius: 5%;
+}
+
+.img-wrap {
+  position: relative;
+  display:inline-block;
+}
+
+.img-wrap h3 {
+  display:inline-block;
+  position: absolute;
+  left: 0;
+  top: 200px;
+  width: 100%;
+}
+
+.test_style{
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.35);
+}
+
 .comment{
-  //max-width: 200px;
-  //width: 200px;
-  //background-color: paleturquoise;
-  //float: right;
   position: fixed;
   right: 20px;
   bottom: 20px;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   font-weight: bold;
 
   border-radius: 8px;
-  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 
-  background-color: #979797;
-  color: crimson;
+  background-color: LightBlue;
+  color: FireBrick;
   padding: 10px;
 
-  max-width: 300px;
-  height: 120px;
+  min-width: 200px;
+  max-width: 350px;
+  min-height: 100px;
 
   font-family: 'VCR', serif;
 
   &_text{
-    max-width: 200px;
-    height: 100%;
   }
 
   &_img{
-    width: 100px;
-    height: 100px;
-    //float: left;
+    width: 80px;
+    height: 80px;
   }
 
   &:hover{
     background-color: azure;
     color: black;
   }
-
-  //display: ;
-  //margin: 5px;
-  //padding-left: 10px;
-  //padding-right: 10px;
-  //padding-top: 20px;
-  //padding-bottom: 20px;
-
-  //border: 5px groove;
-  //border-color: cornflowerblue;
-  //border-radius: 50%;
-  //background-image: url(cloud2.jpg);
-
 }
 
 @media screen and (max-width: 767px) {
   .play_page {
-    //margin-top: 310px;
     margin-top: 100px;
   }
 
   .message{
-    font-size: 35px;
+    font-size: 25px;
+    margin-top: 25px;
   }
 
   .pick{
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .comment{
     font-size: 15px;
-    max-width: 300px;
-    height: 100px;
+
+    min-width: 150px;
+    max-width: 250px;
+    min-height: 70px;
 
     &_img{
-      width: 75px;
-      height: 75px;
+      width: 65px;
+      height: 65px;
     }
   }
 }
-
-//.comment_text{
-//  max-width: 200px;
-//  height: 100%;
-//}
-//
-//.comment_img{
-//  width: 100px;
-//  height: 100px;
-//}

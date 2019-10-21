@@ -1,5 +1,5 @@
 <% provide(:title, 'New Pick') %>
-<h1>Picks#new</h1>
+<h1 style="color: white">Picks#new</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
@@ -7,20 +7,11 @@
       <%= f.label :context, "Text" %>
       <%= f.text_field :context %>
 
-      <%= f.label :message_id, "Integer" %>
+      <%= f.label :message_id, "From" %>
       <%= f.number_field :message_id %>
 
-      <%= f.label :transmit_id, "Integer" %>
+      <%= f.label :transmit_id, "To" %>
       <%= f.number_field :transmit_id %>
-
-      <%#= f.label :email %>
-      <%#= f.email_field :email %>
-
-      <%#= f.label :password %>
-      <%#= f.password_field :password %>
-
-      <%#= f.label :password_confirmation, "Confirmation" %>
-      <%#= f.password_field :password_confirmation %>
 
       <%= f.submit "Create new pick", class: "btn btn-primary" %>
     <% end %>

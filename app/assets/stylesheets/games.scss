@@ -3,27 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-
-//.main_page{
-//  //display: inline;
-//  background-color: #2E2F30;
-//  //height: 100%;
-//}
-
 .main_page{
   position: relative;
   display: block;
   width: 100%;
   box-sizing: border-box;
   text-align: justify;
-  /* Свои стили */
-  //background-color: #2E2F30;
 }
 .main_page:after{
   position: relative;
   display: inline-block;
   width: 100%;
-  //height: auto;
   box-sizing: border-box;
   vertical-align: top;
   content: '';
@@ -31,27 +21,12 @@
 .main_page>div{
   position: relative;
   display: inline-block;
-  //width: 25%;
-  //height: 50px;
-  //box-sizing: border-box;
   margin: 20px;
-  //text-align: left;
-  //vertical-align: top;
-  /* Свои стили */
 }
 
 .block{
-  //position: relative;
-  //display: inline-block;
-
   margin-left: auto;
   margin-right: auto;
-  //float: left;
-
-  //margin-left: 15%;
-  //padding: 0;
-  //display: inline;
-  //margin: 0;
   text-align: center;
   border-radius: 8px;
   box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.15);
@@ -67,44 +42,21 @@
   }
 
   &_info{
-    //max-width: 600px;
-    //height: 400px;
     text-align: left;
     padding: 30px;
   }
 
   &_help{
     max-width: 600px;
-    //height: 400px;
     text-align: left;
     padding: 30px;
   }
 }
 
-//.game_block{
-//  margin-left: auto;
-//  margin-right: auto;
-//
-//  width: 250px;
-//  height: 400px;
-//  //background-color: #666666;
-//  text-align: center;
-//
-//  border-radius: 8px;
-//  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.15);
-//  background-color: azure;
-//
-//  &:hover{
-//    box-shadow: 0 2px 16px 20px rgba(0, 0, 0, 0.15);
-//  }
-//}
-
-
 .game_name{
   margin-left: 10px;
   margin-right: 10px;
   color: crimson;
-  //color: #FF4500;
   font-family: 'Antelive Bold', serif;
 }
 
@@ -155,94 +107,13 @@
   }
 }
 
-
-//.game_start_button{
-//  font-family: 'Antelive Bold', serif;
-//  margin-top: 10px;
-//  background-color: #FF4500;
-//  width: 170px;
-//  height: 40px;
-//  font-size: 19px;
-//  text-align: center;
-//  font-weight: bold;
-//  //text-decoration-color: crimson;
-//
-//  border: 0;
-//  outline: 0;
-//  padding: 0;
-//  //text-align: center;
-//  color: azure;
-//
-//  border-radius: 100px;
-//  box-shadow: 0 4px 16px 0 rgba(237, 65, 89, 0.4);
-//  //background-color: #ed4159;
-//
-//  //bottom: 20px;
-//
-//  //&:focus{
-//  //  outline: none !important
-//  //}
-//
-//  &:hover {
-//    box-shadow: 0 6px 20px 0 rgba(237, 65, 89, 0.4);
-//    background-color:azure;
-//    color: #FF4500;
-//  }
-//  &:active {
-//    box-shadow: 0 2px 10px 0 rgba(237, 65, 89, 0.5);
-//    background-color: azure;
-//    color: #FF4500;
-//  }
-//
-//}
-
-
-//.button {
-//  font-family: "Gotham";
-//  width: 146px;
-//  height: 48px;
-//  border-radius: 100px;
-//  box-shadow: 0 4px 16px 0 rgba(237, 65, 89, 0.4);
-//  background-color: #ed4159;
-//  margin: 48px 0px 0px 0px;
-//  border: 0;
-//  outline: 0;
-//  padding: 0;
-//  text-align: center;
-//  color: #ffffff;
-//}
-//.button:hover {
-//  box-shadow: 0 6px 20px 0 rgba(237, 65, 89, 0.4);
-//  background-color: #ffffff;
-//  color: #ed4159;
-//}
-//.button:active {
-//  box-shadow: 0 2px 10px 0 rgba(237, 65, 89, 0.5);
-//  background-color: #ffffff;
-//  color: #ed4159;
-//}
-
-//@media screen and (max-width: 640px) {
-//  .game_start_button {
-//    //background-color: #730E15;
-//  }
-//}
-//
-//@media screen and (max-height: 640px) and (max-width: 1136px) and (orientation: landscape) {
-//  .game_start_button {
-//    //background-color: #730E15;
-//  }
-//}
-
-
-
-//textarea {
-//  //display: block;
-//  //border: 1px solid #BBB;
-//  //color: #444;
-//  //font-size: 110%;
-//}
-//
-//button {
-//  margin-top: 10px;
-//}
+.invisible_text{
+  margin-top: 20px;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  width: 170px;
+  height: 40px;
+  color: azure;
+  cursor: default;
+}

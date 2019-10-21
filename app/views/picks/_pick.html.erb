@@ -1,15 +1,21 @@
-<li id="pick-<%= pick.id %>">
-  <%#= link_to gravatar_for(micropost.user, size: 50), micropost.user %>
-  <span>ID: <%= link_to pick.id, pick %></span>
-  <span class="context">Context: "<%= pick.context %>"</span>
-  <span class="message">On message: "<%= link_to pick.message.value, pick.message %>"</span>
-  <span class="message">To message: "<%= link_to pick.transmit.value, pick.transmit %>"</span>
+<li  style="font-size: 15px" id="pick-<%= pick.id %>">
+  <span  style="color: white">ID: <%= link_to pick.id, pick %></span><br />
+  <span  style="color: white" class="context">CONTEXT: "<%= pick.context %>"</span>
 
-<!--  <span class="context"><%#= pick.context %></span>-->
-<!--  <span class="timestamp">-->
-<!--    Posted <%#= time_ago_in_words(pick.created_at) %> ago.-->
-<!--  </span>-->
-
+  <%= link_to "edit", edit_pick_url(pick), method: :get %>
   <%= link_to "delete", pick, method: :delete,
               data: { confirm: "You sure?" } %>
+
+  <br />
+  <span  style="color: white; margin-left: 100px;">ID: <%= link_to pick.message.id, pick.message %></span><br />
+  <span  style="color: white; margin-left: 100px;" class="context">TEXT: "<%= pick.message.value %>"</span>
+  <%= link_to "edit", edit_message_url(pick.message), method: :get %>
+  <%= link_to "delete", pick.message, method: :delete,
+              data: { confirm: "You sure?" } %>
+    <br />
+    <span  style="color: white; margin-left: 100px;">ID: <%= link_to pick.transmit.id, pick.transmit %></span><br />
+    <span  style="color: white; margin-left: 100px;" class="context">TEXT: "<%= pick.transmit.value %>"</span>
+    <%= link_to "edit", edit_message_url(pick.transmit), method: :get %>
+    <%= link_to "delete", pick.transmit, method: :delete,
+                data: { confirm: "You sure?" } %>
 </li>

@@ -1,6 +1,5 @@
 <% provide(:title, "Edit user") %>
 <h1 class="title">Update your profile</h1>
-<!--<div class="block block_setting">-->
 <div class="row">
   <div class="col-md-4 col-md-offset-4 input block block_info">
     <%= form_for(@user) do |f| %>
@@ -20,11 +19,5 @@
 
       <%= f.submit "Save changes", class: "btn button" %>
     <% end %>
-
-<!--    <div class="gravatar_edit">-->
-      <%#= gravatar_for @user %>
-<!--      <a href="http://gravatar.com/emails" target="_blank">change</a>-->
-<!--    </div>-->
   </div>
 </div>
-<!--</div>-->

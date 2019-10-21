@@ -1,36 +1,10 @@
 <% provide(:title, "Game") %>
 <div class="play_page col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1 ">
 
-  <% if comment?(@message) %>
-<div class="comment">
-  <span class="comment_text"><%=comment_text(@message) %></span>
-  <%= image_tag(comment_smile(@message), class: "comment_img") %>
-<!--  <img src="smile_f.jpg" class="comment_img">-->
-</div>
-  <% end %>
-
-<%#= audio_tag "The_XX_-_Intro.mp3", id: "sound", class: "audio_to_play", autoplay: true %>
-
-<!--<h1>Game#play</h1>-->
-<!--<p>Find me in app/views/game/play.html.erb</p>-->
-<!--<h3 onclick="sound()" >ID: <span id="message_id"><%#= @message.id %>  </span></h3>-->
-
-<h3 id="value" class="message" onclick="sound()">Value: <%= @message.value %></h3>
-
-<!--<textarea id="textExample1" rows="5" cols="60">Но взял он меч, и взял он щит,-->
-<!--Высоких полон дyм.-->
-<!--В глyщобy пyть его лежит-->
-<!--Под дерево Тyмтyм.-->
-<!--  </textarea>-->
-
-<!--<button onclick=animateText("textExample")>Запустить анимацию набора текста!</button>-->
-
-<!--<textarea id="textExample1"  rows="5" cols="60" class="message">-->
-<!--  Высоких полон дyм.-->
-<!--В глyщобy пyть его лежит-->
-<!--Под дерево Тyмтyм.-->
-<!--</textarea>-->
-
+<div class="img_page col-md-10 col-md-offset-1">
+  <%= image_tag(message_image(@message), class: "test_style") %>
+  <h3 id="value" class="message"><%= message_text(@message) %></h3>
+<br />
 <div class = "picks_all">
 <% for p in @picks %>
   <a id="pick" href="<%=p.transmit.id %>">
@@ -40,5 +14,12 @@
   </a>
 <% end%>
 </div>
-  <!--<h3 class="message">Ты просыпаешься в незнакомой темнице.</h3>-->
+
+</div>
+  <% if comment?(@message) %>
+    <div class="comment"  onclick="show('comment', '')">
+      <p id = "comment" class="comment_text"><%=comment_text(@message) %></p>
+      <%= image_tag(comment_smile(@message), class: "comment_img") %>
+    </div>
+  <% end %>
 </div>

@@ -9,9 +9,15 @@
 
 body {
   padding-top: 60px;
-  //background-color: dimgray;
   background-color: brown;
-  //text-align: center;
+  overflow-x: hidden;
+  text-decoration: none;
+  a{
+    text-decoration: none !important;
+  }
+  .btn{
+    outline: 0 !important;
+  }
 }
 
 .center {

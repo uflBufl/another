@@ -1,12 +1,7 @@
-
 <% provide(:title, "Home") %>
 <h1 class="title">Web-Novels</h1>
 
-  <%#= current_user.page_testplay = params[:id] %>
-
-
-<%#= render @games %>
-<div class="main_page col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2 ">
+<div class="main_page col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3 ">
 
 <% for g in @games %>
   <div class="block block_game">
@@ -15,74 +10,23 @@
     </div>
     <h2 class="game_name"><%= g.name %></h2>
 
-    <% if logged_in? && current_user.page_testplay!=0 %>
+    <% if g.id != 2 %>
 
-      <%#= current_user.page_testplay = params[:id] %>
-<!--      <li><%#= link_to "Users", users_path %></li>-->
-<!--      <li><%#= link_to "Profile", current_user %></li>-->
-<!--      <li><%#= link_to "Settings", edit_user_path(current_user) %></li>-->
-<!--      <li>-->
-        <%#= link_to "Log out", logout_path, method: :delete %>
-<!--      </li>-->
+    <% if logged_in? && current_user.page_testplay!=0 %>
       <%= button_to "Продолжить", 'play/'+current_user.page_testplay.to_s, class: 'btn button button_game_start', method: :get %>
       <%= button_to "Начать заново", 'play/'+g.first_page_id.to_s, class: 'btn button button_game_start', method: :get,
                     data: { confirm: "Вы уверены?" }  %>
-
   <% else %>
       <%= button_to "Начать", 'play/'+g.first_page_id.to_s, class: 'btn button button_game_start', method: :get %>
+        <p class="invisible_text">Я люблю тебя:)</p>
     <% end %>
 
+    <% else %>
+      <%= button_to "Скоро...", root_path, class: 'btn button button_game_start', method: :get %>
+      <p class="invisible_text">Я люблю тебя:)</p>
 
-<!--    <button class="game_start_button" onclick="">START</button>-->
-    <%#= button_to "Читать", 'play/'+g.first_page_id.to_s, class: 'game_start_button', method: :get %>
+  <% end %>
 
   </div>
-
-
-
-
-<!--    <div class="block block_game">-->
-<!--      <div class="image_block">-->
-        <%#= image_tag(g.image, class: "game_icon") %>
-<!--      </div>-->
-<!--      <h2 class="game_name"><%#= g.name %></h2>-->
-
-      <%# if logged_in? && current_user.page_testplay!=0 %>
-
-        <%#= current_user.page_testplay = params[:id] %>
-<!--             <li><%##= link_to "Users", users_path %></li>-->
-<!--              <li><%##= link_to "Profile", current_user %></li>-->
-<!--              <li><%##= link_to "Settings", edit_user_path(current_user) %></li>-->
-<!--              <li>-->
-        <%#= link_to "Log out", logout_path, method: :delete %>
-<!--              </li>-->
-        <%#= button_to "Продолжить", 'play/'+current_user.page_testplay.to_s, class: 'btn button button_game_start', method: :get %>
-        <%#= button_to "Начать заново", 'play/'+g.first_page_id.to_s, class: 'btn button button_game_start', method: :get %>
-
-      <%# else %>
-        <%#= button_to "Начать", 'play/'+g.first_page_id.to_s, class: 'btn button button_game_start', method: :get %>
-      <%# end %>
-
-
-<!--          <button class="game_start_button" onclick="">START</button>-->
-      <%#= button_to "Читать", 'play/'+g.first_page_id.to_s, class: 'game_start_button', method: :get %>
-
-
-<!--    </div>-->
-
-
-
-
 <% end%>
-
-
-<%# if logged_in? %>
-  <%#= current_user.page_testplay %>
-<!--<p>-->
-<!--  This is the home page for the-->
-<!--  <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>-->
-<!--  sample application.-->
-<!--</p>-->
-<%# end%>
-
 </div>

@@ -20,7 +20,7 @@
 // animateText("textExample");
 
 
-document.addEventListener("DOMContentLoaded", () =>{animateText("value");});
+// document.addEventListener("DOMContentLoaded", () =>{animateText("value");});
 
 // window.onload = function() {
 //     alert("123213");
@@ -102,14 +102,14 @@ function f() {
     animateText("textExample");
 }
 
-function shownavb() {
-    if (document.documentElement.clientWidth < '767') {
-        var x = document.getElementById("navb");
-        if (x.style.display == "inline") {
+function show(str, disp) {
+    if ((str == "navb" && document.documentElement.clientWidth < '767') || (str == "comment")) {
+        var x = document.getElementById(str);
+        if (x.style.display == disp) {
             x.style.display = "none"
             // x.style.display = "inline"
         } else {
-            x.style.display = "inline"
+            x.style.display = disp
             // x.style.display = "none"
         }
     }

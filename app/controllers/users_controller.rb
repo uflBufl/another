@@ -28,7 +28,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       log_in @user
-      flash[:success] = "Welcome!"
+      flash[:success] = "Добро пожаловать!"
       redirect_to edit_user_path(@user)
     else
       render 'new'
@@ -53,7 +53,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
-      flash[:success] = "Profile updated"
+      flash[:success] = "Профиль обновлён"
       redirect_to root_path
     else
       render 'edit'

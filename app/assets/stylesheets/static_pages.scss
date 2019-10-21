@@ -31,31 +31,22 @@
 /* header */
 
 #logo {
-  //margin-top: 10px;
-  //margin-bottom: auto;
-  //bottom: 0;
   color: crimson;
     font-family: 'Antelive Bold', serif;
   font-size: 40px;
   text-decoration: none;
-  //margin-left: 40px;
 }
 
 header{
   padding-top: 10px;
   font-family: 'Antelive Bold', serif;
-  //height: 70px;
   position: unset;
-  //overflow: none;
 }
 
 .title{
   font-family: 'Antelive Bold', serif;
   color: azure;
   text-shadow: black 3px 3px 2px;
-  //align-items: center;
-  //margin-right: auto;
-  //margin-left: auto;
   text-align: center;
   margin-top: 60px;
   margin-bottom: 60px;
@@ -69,7 +60,6 @@ header{
   padding-left: 5px;
   font-family: 'Antelive Bold', serif;
   width: 300px;
-  //height: 100px;
   background-color: goldenrod;
   position: fixed;
   margin-left: 30px;
@@ -81,26 +71,23 @@ header{
   color: crimson;
 }
 
+.help_img{
+  margin-top: 20px;
+  object-fit: cover;
+
+  width: 233px;
+  height: 200px;
+  float: left;
+  margin-right: 10px;
+}
+
 @media screen and (max-width: 767px) {
   .title {
-    //margin-top: 310px;
     margin-top: 100px;
   }
 
   #navb{
     display: none;
-    //margin-bottom: 310px;
   }
 
 }
-
-//@media screen and (max-height: 640px) and (max-width: 1136px) and (orientation: landscape) {
-//  .title {
-//    margin-top: 260px;
-//  }
-//}
-
-//body{
-//  color: #730E15;
-//  background-color: #979797;
-//}

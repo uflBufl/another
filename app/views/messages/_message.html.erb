@@ -1,7 +1,20 @@
-<li>
-  <span>ID: <%= link_to message.id, message %></span>
-  <span>Value: <%= link_to message.value, message %></span>
+<li style="font-size: 15px">
+  <span  style="color: white">ID: <%= link_to message.id, message %></span><br />
+  <span style="color: white">TEXT: "<%= message.value %>"</span><br />
+  <span style="color: white">COMMENT: "<%= message.comment %>"</span>
 
+  <%= link_to "edit", edit_message_url(message), method: :get %>
   <%= link_to "delete", message, method: :delete,
               data: { confirm: "You sure?" } %>
+
+  <% for p in message.picks.all %>
+    <br />
+      <span  style="color: white; margin-left: 100px;">ID: <%= link_to p.id, p %></span><br />
+      <span  style="color: white; margin-left: 100px;" class="context">CONTEXT: "<%= p.context %>"</span>
+      <%= link_to "edit", edit_pick_url(p), method: :get %>
+    <%= link_to "delete", p, method: :delete,
+                data: { confirm: "You sure?" } %>
+
+  <% end %>
+
 </li>

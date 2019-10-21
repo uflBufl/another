@@ -13,6 +13,8 @@ module MessagesHelper
       'angry_final4.png'
     when 'N'
       'normal_final4.png'
+    when 'E'
+      'evil_smile1.png'
     else
       'smile_final4.png'
     end
@@ -21,6 +23,21 @@ module MessagesHelper
   # Возвращает текст комментария
   def comment_text(message)
     message.comment[0..-2]
+  end
+
+  # Возвращает текст сообщения
+  def message_text(message)
+    image?(message) ? message.value[0..message.value.index('$')-1] : message.value
+  end
+
+  # Возвращает картинку
+  def message_image(message)
+    image?(message) ? message.value[message.value.index('$')+1..-1] +'.jpg' : 'default.jpg'
+  end
+
+  # Возвращает true, если сообщение содержит картинку
+  def image?(message)
+    message.value.include?('$')
   end
 
 end
