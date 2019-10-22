@@ -4,7 +4,7 @@ class Message < ApplicationRecord
     has_one :game,foreign_key: 'first_page_id', class_name: "Game"
 
     validates :value, presence: true, length: { minimum: 2 },
-                      uniqueness: true
+                      uniqueness: false
     validates :comment,
-              uniqueness: true, presence: false
+              uniqueness: false, presence: false
 end
