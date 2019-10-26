@@ -3,20 +3,12 @@ class PicksController < ApplicationController
   before_action :second_user,     only: [:destroy, :create, :edit, :index, :new, :show, :update]
 
   def show
-    if logged_in? && current_user.id == 2
       @pick = Pick.find(params[:id])
       @message = @pick.transmit
-    else
-      redirect_to root_path
-    end
   end
 
   def new
-    if logged_in? && current_user.id == 2
       @pick = Pick.new
-    else
-      redirect_to root_path
-    end
   end
 
   def create
@@ -36,19 +28,11 @@ class PicksController < ApplicationController
   end
 
   def index
-    if logged_in? && current_user.id == 2
       @picks = Pick.all
-    else
-      redirect_to root_path
-    end
   end
 
   def edit
-    if logged_in? && current_user.id == 2
       @pick = Pick.find(params[:id])
-    else
-      redirect_to root_path
-    end
   end
 
   def update
@@ -72,15 +56,13 @@ class PicksController < ApplicationController
   end
 
   def first_user
-    if logged_in? && current_user.id == 1
-    else
+    unless logged_in? && current_user.id == 1
       redirect_to root_path
     end
   end
 
   def second_user
-    if logged_in? && current_user.id == 2
-    else
+    unless logged_in? && current_user.id == 2
       redirect_to root_path
     end
   end

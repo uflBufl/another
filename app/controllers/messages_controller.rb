@@ -1,15 +1,11 @@
 class MessagesController < ApplicationController
   # before_action :admin_user,     only: [:destroy, :create, :edit, :index, :new, :show, :update]
-  # before_action :second_user,     only: [:destroy, :create, :edit, :index, :new, :show, :update]
   before_action :second_user,     only: [:destroy, :create, :edit, :index, :new, :show, :update]
+  # before_action :check_user,     only: [:destroy, :create]
 
   def show
-    if logged_in? && current_user.id == 2
       @message = Message.find(params[:id])
       @picks = @message.picks.all
-    else
-      redirect_to root_path
-    end
   end
 
   def destroy
@@ -19,11 +15,7 @@ class MessagesController < ApplicationController
   end
 
   def new
-    if logged_in? && current_user.id == 2
       @message = Message.new
-    else
-      redirect_to root_path
-    end
   end
 
   def create
@@ -36,19 +28,11 @@ class MessagesController < ApplicationController
   end
 
   def index
-    if logged_in? && current_user.id == 2
       @messages = Message.all
-    else
-      redirect_to root_path
-    end
   end
 
   def edit
-    if logged_in? && current_user.id == 2
       @message = Message.find(params[:id])
-    else
-      redirect_to root_path
-    end
   end
 
   def update
@@ -71,17 +55,14 @@ class MessagesController < ApplicationController
     redirect_to(root_url) unless current_user.admin?
   end
 
-
   def first_user
-    if logged_in? && current_user.id == 1
-    else
+    unless logged_in? && current_user.id == 1
       redirect_to root_path
     end
   end
 
   def second_user
-    if logged_in? && current_user.id == 2
-    else
+    unless logged_in? && current_user.id == 2
       redirect_to root_path
     end
   end

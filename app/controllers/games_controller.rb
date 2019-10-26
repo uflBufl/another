@@ -2,20 +2,12 @@ class GamesController < ApplicationController
   before_action :second_user,     only: [:destroy, :create, :edit, :index, :new, :show, :update]
 
   def show
-    if logged_in? && current_user.id == 2
       @game = Game.find(params[:id])
       @page = @game.first_page
-    else
-      redirect_to root_path
-    end
   end
 
   def new
-    if logged_in? && current_user.id == 2
       @game = Game.new
-    else
-      redirect_to root_path
-    end
   end
 
 
@@ -36,19 +28,11 @@ class GamesController < ApplicationController
   end
 
   def index
-    if logged_in? && current_user.id == 2
       @games = Game.all
-    else
-      redirect_to root_path
-    end
   end
 
   def edit
-    if logged_in? && current_user.id == 2
       @game = Game.find(params[:id])
-    else
-      redirect_to root_path
-    end
   end
 
   def update
@@ -67,15 +51,13 @@ class GamesController < ApplicationController
   end
 
   def first_user
-    if logged_in? && current_user.id == 1
-    else
+    unless logged_in? && current_user.id == 1
       redirect_to root_path
     end
   end
 
   def second_user
-    if logged_in? && current_user.id == 2
-    else
+    unless logged_in? && current_user.id == 2
       redirect_to root_path
     end
   end
